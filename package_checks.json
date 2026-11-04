@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "generator_and_features_seeds": 10,
+  "scenario_cashflow_comparisons": 100,
+  "replayed_ledger_files": 340,
+  "replayed_household_month_policy_rows": 18360000,
+  "retrained_full_size_seeds": [
+    20261102
+  ],
+  "retrained_prediction_scenarios": 10,
+  "retrained_ledger_files": 34,
+  "comparison": "Exact NumPy array equality for generated data, features, scenario cash flows, predictions and allocations.",
+  "unit_tests": 29,
+  "smoke": {
+    "model_set": "extended",
+    "seeds": 1,
+    "households_per_seed": 250,
+    "ledger_files": 34,
+    "household_month_policy_rows": 183600
+  }
+}

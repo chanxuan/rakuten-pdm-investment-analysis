@@ -1,0 +1,41 @@
+{
+  "extends": "full.json",
+  "seeds": [
+    314159
+  ],
+  "households": {
+    "train": 140,
+    "validation": 30,
+    "calibration": 30,
+    "test": 50
+  },
+  "candidate_models": [
+    {
+      "max_iter": 30,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 60,
+      "learning_rate": 0.07,
+      "l2_regularization": 5.0
+    }
+  ],
+  "lightgbm_candidates": [
+    {
+      "num_leaves": 15,
+      "learning_rate": 0.05,
+      "n_estimators": 30,
+      "min_child_samples": 50
+    }
+  ],
+  "lstm_candidates": [
+    {
+      "hidden_size": 32,
+      "num_layers": 1,
+      "head_dropout": 0.1,
+      "lr": 0.001
+    }
+  ],
+  "lstm": {
+    "max_epochs": 2
+  },
+  "bootstrap_repetitions": 100
+}

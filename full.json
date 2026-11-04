@@ -1,0 +1,242 @@
+{
+  "seeds": [
+    20261102,
+    20261103,
+    20261104,
+    20261105,
+    20261106,
+    20261107,
+    20261108,
+    20261109,
+    20261110,
+    20261111
+  ],
+  "households": {
+    "train": 1400,
+    "validation": 300,
+    "calibration": 300,
+    "test": 500
+  },
+  "months": 48,
+  "train_months": [
+    13,
+    36
+  ],
+  "validation_months": [
+    25,
+    36
+  ],
+  "calibration_months": [
+    25,
+    36
+  ],
+  "evaluation_months": [
+    37,
+    48
+  ],
+  "quantile": 0.9,
+  "income_anchor": 311571,
+  "consumption_anchor": 179225,
+  "reserve_months": 2,
+  "investment_cap": 40000,
+  "income_cap_fraction": 0.15,
+  "investment_step": 1000,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 791903,
+  "threads": 4,
+  "candidate_models": [
+    {
+      "max_iter": 100,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 60,
+      "learning_rate": 0.07,
+      "l2_regularization": 5.0
+    },
+    {
+      "max_iter": 140,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 40,
+      "learning_rate": 0.07,
+      "l2_regularization": 10.0
+    },
+    {
+      "max_iter": 160,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 120,
+      "learning_rate": 0.05,
+      "l2_regularization": 10.0
+    }
+  ],
+  "generator": {
+    "income_log_sigma": 0.45,
+    "spend_log_sigma": 0.38,
+    "income_spend_latent_correlation": 0.4,
+    "fixed_share_range": [
+      0.55,
+      0.7
+    ],
+    "variable_log_sigma_range": [
+      0.15,
+      0.45
+    ],
+    "variable_ar_coefficient": 0.35,
+    "common_season_amplitude": 0.1,
+    "private_season_amplitude": 0.05,
+    "monthly_income_growth": 0.001,
+    "monthly_expense_growth": 0.002,
+    "income_noise_sigma": 0.06,
+    "income_interruption_probability": 0.06,
+    "interrupted_income_fraction": 0.5,
+    "planned_probability": 0.05,
+    "planned_size_range": [
+      0.25,
+      0.65
+    ],
+    "shock_probability": 0.08,
+    "shock_size_range": [
+      0.15,
+      0.8
+    ],
+    "low_initial_reserve_probability": 0.25,
+    "low_initial_reserve_ratio_range": [
+      0.25,
+      1.0
+    ],
+    "normal_initial_reserve_ratio_range": [
+      1.0,
+      2.5
+    ]
+  },
+  "scenarios": {
+    "baseline": {},
+    "shock_probability_18": {
+      "shock_probability": 0.18
+    },
+    "variable_expense_up_15": {
+      "expense_multiplier": 1.15,
+      "duration": 6
+    },
+    "income_down_20": {
+      "income_multiplier": 0.8,
+      "duration": 6
+    },
+    "joint_shock": {
+      "expense_multiplier": 1.15,
+      "income_multiplier": 0.8,
+      "duration": 6,
+      "shock_probability": 0.18,
+      "initial_cash_multiplier": 0.6
+    },
+    "pareto_bursts": {
+      "tail": "pareto",
+      "pareto_shape": 1.7
+    },
+    "student_t_clusters": {
+      "tail": "student_t",
+      "student_df": 3,
+      "persistence_probability": 0.45
+    },
+    "reserve_1_month": {
+      "reserve_multiplier": 0.5
+    },
+    "reserve_3_months": {
+      "reserve_multiplier": 1.5
+    },
+    "debt_interest_1pct": {
+      "monthly_debt_interest": 0.01
+    }
+  },
+  "fixed_caps": [
+    20000,
+    40000,
+    60000
+  ],
+  "income_caps": [
+    0.1,
+    0.15,
+    0.2
+  ],
+  "grid_scenarios": [
+    "baseline",
+    "income_down_20",
+    "joint_shock"
+  ],
+  "fixed_search_max": 100000,
+  "step": 1000,
+  "prediction_difference_tolerance_yen": 1.0,
+  "lightgbm_candidates": [
+    {
+      "num_leaves": 15,
+      "learning_rate": 0.05,
+      "n_estimators": 300,
+      "min_child_samples": 50
+    },
+    {
+      "num_leaves": 31,
+      "learning_rate": 0.03,
+      "n_estimators": 500,
+      "min_child_samples": 80
+    },
+    {
+      "num_leaves": 31,
+      "learning_rate": 0.05,
+      "n_estimators": 500,
+      "min_child_samples": 40
+    }
+  ],
+  "lstm_candidates": [
+    {
+      "hidden_size": 32,
+      "num_layers": 1,
+      "head_dropout": 0.1,
+      "lr": 0.001
+    },
+    {
+      "hidden_size": 64,
+      "num_layers": 1,
+      "head_dropout": 0.2,
+      "lr": 0.0005
+    },
+    {
+      "hidden_size": 32,
+      "num_layers": 2,
+      "head_dropout": 0.2,
+      "lr": 0.001
+    }
+  ],
+  "lstm": {
+    "batch_size": 256,
+    "max_epochs": 60,
+    "patience": 8,
+    "head_width": 32,
+    "gradient_clip": 5.0,
+    "sequence_channels": [
+      "past_variable_expense"
+    ],
+    "head_inputs": "16 engineered features; current Y/F/P and calendar enter the prediction head",
+    "deterministic": true,
+    "device": "cpu"
+  },
+  "primary_comparison": [
+    "hgb_calibrated",
+    "history_q90_calibrated"
+  ],
+  "exploratory_comparisons": [
+    [
+      "lightgbm_calibrated",
+      "hgb_calibrated"
+    ],
+    [
+      "lstm_calibrated",
+      "hgb_calibrated"
+    ],
+    [
+      "lightgbm_calibrated",
+      "history_q90_calibrated"
+    ],
+    [
+      "lstm_calibrated",
+      "history_q90_calibrated"
+    ]
+  ]
+}

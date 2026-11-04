@@ -1,0 +1,31 @@
+﻿seed,model,batch_rows,median_batch_prediction_ms,model_bytes,size_definition,parameters_or_leaves,preprocessing,device,threads
+20261102,hgb,6000,15.527499999734573,177219,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261102,lightgbm,6000,9.267800000088755,440246,LightGBM native text model bytes,4500,input feature construction excluded; model-specific scaling included,cpu,4
+20261102,lstm,6000,9.032800000568386,24324,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",6081,input feature construction excluded; model-specific scaling included,cpu,4
+20261103,hgb,6000,15.870999995968305,177219,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261103,lightgbm,6000,9.490099997492507,439553,LightGBM native text model bytes,4500,input feature construction excluded; model-specific scaling included,cpu,4
+20261103,lstm,6000,9.82339999609394,24324,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",6081,input feature construction excluded; model-specific scaling included,cpu,4
+20261104,hgb,6000,14.271599997300655,177219,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261104,lightgbm,6000,9.616399998776615,440283,LightGBM native text model bytes,4500,input feature construction excluded; model-specific scaling included,cpu,4
+20261104,lstm,6000,9.088400001928676,24324,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",6081,input feature construction excluded; model-specific scaling included,cpu,4
+20261105,hgb,6000,14.974699995946139,177219,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261105,lightgbm,6000,8.513299995684065,440842,LightGBM native text model bytes,4500,input feature construction excluded; model-specific scaling included,cpu,4
+20261105,lstm,6000,21.36890000110725,79108,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",19777,input feature construction excluded; model-specific scaling included,cpu,4
+20261106,hgb,6000,10.75499999569729,122499,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261106,lightgbm,6000,9.545799999614246,441103,LightGBM native text model bytes,4500,input feature construction excluded; model-specific scaling included,cpu,4
+20261106,lstm,6000,9.889000000839587,24324,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",6081,input feature construction excluded; model-specific scaling included,cpu,4
+20261107,hgb,6000,10.00239999848418,122499,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261107,lightgbm,6000,9.652900000219233,440339,LightGBM native text model bytes,4500,input feature construction excluded; model-specific scaling included,cpu,4
+20261107,lstm,6000,11.111300002085045,24324,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",6081,input feature construction excluded; model-specific scaling included,cpu,4
+20261108,hgb,6000,10.733800001617055,122499,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261108,lightgbm,6000,8.666800000355579,439725,LightGBM native text model bytes,4500,input feature construction excluded; model-specific scaling included,cpu,4
+20261108,lstm,6000,18.62509999773465,58116,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",14529,input feature construction excluded; model-specific scaling included,cpu,4
+20261109,hgb,6000,15.679099997214507,284419,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261109,lightgbm,6000,9.732200000144076,440608,LightGBM native text model bytes,4500,input feature construction excluded; model-specific scaling included,cpu,4
+20261109,lstm,6000,20.618299997295253,79108,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",19777,input feature construction excluded; model-specific scaling included,cpu,4
+20261110,hgb,6000,10.511499996937346,122499,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261110,lightgbm,6000,26.67959999962477,1436532,LightGBM native text model bytes,15500,input feature construction excluded; model-specific scaling included,cpu,4
+20261110,lstm,6000,17.242399997485336,58116,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",14529,input feature construction excluded; model-specific scaling included,cpu,4
+20261111,hgb,6000,10.029000004578847,122499,v2 joblib checkpoint bytes including metadata,0,input feature construction excluded; model-specific scaling included,cpu,4
+20261111,lightgbm,6000,11.013900002581067,440252,LightGBM native text model bytes,4500,input feature construction excluded; model-specific scaling included,cpu,4
+20261111,lstm,6000,20.73789999849396,24324,"LSTM parameter tensor bytes, excludes scalers and serialization overhead",6081,input feature construction excluded; model-specific scaling included,cpu,4

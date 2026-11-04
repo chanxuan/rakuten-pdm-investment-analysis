@@ -1,0 +1,16 @@
+{
+  "python": "3.12.10",
+  "system": "Windows 11",
+  "device": "cpu",
+  "threads": 4,
+  "versions": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1",
+    "torch": "2.14.0+cpu",
+    "lightgbm": "4.6.0",
+    "joblib": "1.5.3"
+  },
+  "note": "Observed environment of the saved reference experiment."
+}
